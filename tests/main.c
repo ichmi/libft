@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 17:28:17 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/16 12:32:45 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/16 12:35:05 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -2216,7 +2216,7 @@ void	test_ft_strtrim()
 {
 	printf("\nt_strtrim\n");
 
-	char	*str = (char *)calloc(20, sizeof(char));
+	char	*str = (char *)calloc(30, sizeof(char));
 	char	*p;
 
 	printf("Test 1:  "); // Should remove "fofo" from the beginning and "fo" (end str)
@@ -2876,8 +2876,8 @@ void	test_ft_putendl_fd()
 	printf("\nft_putendl_fd\n");
 
 	int		fd;
-	char	*buff = (char *)calloc(11, sizeof(char));
-	char	*str = (char *)calloc(11, sizeof(char));
+	char	*buff = (char *)calloc(30, sizeof(char));
+	char	*str = (char *)calloc(30, sizeof(char));
 
 	printf("Test 1: ");
 	fd = open("test_putendl", O_RDWR | O_CREAT);
