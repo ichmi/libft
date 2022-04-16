@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/11 13:01:36 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/11 14:51:21 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/04/11 14:36:43 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/04/12 17:57:48 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static int	ft_setoff(const char *set, const char ch)
 {
-	const char	*offset;
-	char		*buff;
-	char		*pb;
+	while (*set)
+		if (ch == *set++)
+			return (1);
+	return (0);
+}
 
-	if (!s || (int)start < 0)
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	const char	*last;
+	size_t		size;
+
+	if (!s1 || !set)
 		return (NULL);
-	buff = (char *)malloc(len);
-	if (!buff)
-		return (NULL);
-	pb = buff;
-	offset = s + start;
-	ft_strlcpy(buff, offset, len + 1);
-	return (pb);
+	size = ft_strlen(s1);
+	last = s1 + (size - 1);
+	while (ft_setoff(set, *s1))
+		s1++;
+	while (ft_setoff(set, *last))
+		last--;
+	if (s1 > last)
+		return (ft_strdup(""));
+	return (ft_substr(s1, 0, (last - s1) + 1));
 }

@@ -6,479 +6,480 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 17:28:17 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/11 13:01:15 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/16 12:19:16 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <string.h>
 #include <bsd/string.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 void	test_ft_isalpha()
 {
 	printf("\nft_isalpha\n");
+
 	printf("Test 1:  ");
 	if (ft_isalpha('-') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 2:  ");
 	if (ft_isalpha('a') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 1 (True)\n");
+		printf("KO\n");
 
 	printf("Test 3:  ");
 	if (ft_isalpha('A') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 1 (True)\n");
+		printf("KO\n");
 
 	printf("Test 4:  ");
 	if (ft_isalpha('$') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 5:  ");
 	if (ft_isalpha(' ') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 6:  ");
 	if (ft_isalpha('\t') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 7:  ");
 	if (ft_isalpha('\n') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 8:  ");
 	if (ft_isalpha(0) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 9:  ");
 	if (ft_isalpha(-45) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 10: ");
 	if (ft_isalpha(127) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 11: ");
 	if (ft_isalpha(101) != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 }
 
 void	test_ft_isdigit()
 {
 	printf("\nft_isdigit\n");
+
 	printf("Test 1:  ");
 	if (ft_isdigit(0) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 2:  ");
 	if (ft_isdigit(1) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 3:  ");
 	if (ft_isdigit(-1) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 4:  ");
 	if (ft_isdigit(21377382) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 5:  ");
 	if (ft_isdigit('0') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 6:  ");
 	if (ft_isdigit('9') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 7:  ");
 	if (ft_isdigit('\t') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 8:  ");
 	if (ft_isdigit('b') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 9:  ");
 	if (ft_isdigit('!') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 10: ");
 	if (ft_isdigit(':') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 11: ");
 	if (ft_isdigit('^') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 12: ");
 	if (ft_isdigit('~') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 }
 
 void	test_ft_isalnum()
 {
 	printf("\nft_isalnum\n");
+
 	printf("Test 1:  ");
 	if (ft_isalnum('a') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 2:  ");
 	if (ft_isalnum('A') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 3:  ");
 	if (ft_isalnum('0') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 4:  ");
 	if (ft_isalnum('9') != 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 5:  ");
 	if (ft_isalnum(0) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 6:  ");
 	if (ft_isalnum(0) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 7:  ");
 	if (ft_isalnum(-1) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 8:  ");
 	if (ft_isalnum(127) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 9:  ");
 	if (ft_isalnum(21377382) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 10: ");
 	if (ft_isalnum('!') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 11: ");
 	if (ft_isalnum(':') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 12: ");
 	if (ft_isalnum('^') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 
 	printf("Test 13: ");
 	if (ft_isalnum('~') == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0 (Zero/False)\n");
+		printf("KO\n");
 }
 
 void	test_ft_isascii()
 {
 	printf("\nft_isascii\n");
+
 	printf("Test 1: ");
 	int fail = 0;
-	for (int i=0; i <= 127; ++i) {
+	for (int i=0; i <= 127; ++i)
 		if (!ft_isascii(i))
 			fail = 1;
-		if (fail)
-			printf("\nKO: ft_isascii(%d)\n%d\n", i, ft_isascii(i));
-	}
-	if (!fail)
+	if (fail)
+		printf("KO\n");
+	else
 		printf("OK\n");
 
 	printf("Test 2: ");
 	fail = 0;
-	for (int i=-255; i < 0; ++i) {
+	for (int i=-255; i < 0; ++i)
 		if (ft_isascii(i))
-		{
 			fail = 1;
-			printf("\nKO: ft_isascii(%d)\n%d\n", i, ft_isascii(i));
-		}
-	}
-	if (!fail)
+	if (fail)
+		printf("KO\n");
+	else
 		printf("OK\n");
 
 	printf("Test 3: ");
 	fail = 0;
-	for (int i=128; i < 256; ++i) {
+	for (int i=128; i < 256; ++i)
 		if (ft_isascii(i))
-		{
 			fail = 1;
-			printf("\nKO: ft_isascii(%d)\n%d\n", i, ft_isascii(i));
-		}
-	}
-	if (!fail)
+	if (fail)
+		printf("KO\n");
+	else
 		printf("OK\n");
 }
 
 void	test_ft_isprint()
 {
 	printf("\nft_isprint\n");
+
 	printf("Test 1: ");
 	int fail = 0;
-	for (int i=0; i >= 32 && i <= 127; ++i) {
+	for (int i=0; i >= 32 && i <= 127; ++i)
 		if (!ft_isprint(i))
 			fail = 1;
-		if (fail)
-			printf("\nKO: ft_isprint(%d)\n%d\n", i, ft_isascii(i));
-	}
-	if (!fail)
+	if (fail)
+		printf("KO\n");
+	else
 		printf("OK\n");
 
 	printf("Test 2: ");
 	fail = 0;
-	for (int i=-255; i < 32; ++i) {
+	for (int i=-255; i < 32; ++i)
 		if (ft_isprint(i))
-		{
 			fail = 1;
-			printf("\nKO: ft_isprint(%d)\n%d\n", i, ft_isascii(i));
-		}
-	}
-	if (!fail)
+	if (fail)
+		printf("KO\n");
+	else
 		printf("OK\n");
 
 	printf("Test 3: ");
 	fail = 0;
-	for (int i=128; i < 256; ++i) {
+	for (int i=128; i < 256; ++i)
 		if (ft_isprint(i))
-		{
 			fail = 1;
-			printf("\nKO: ft_isprint(%d)\n%d\n", i, ft_isascii(i));
-		}
-	}
-	if (!fail)
+	if (fail)
+		printf("KO\n");
+	else
 		printf("OK\n");
 }
 
 void	test_ft_strlen()
 {
 	printf("\nft_strlen\n");
+
 	printf("Test 1: ");
 	if (ft_strlen("foo") == 3)
 		printf("OK\n");
 	else
-		printf("KO: Expected 3, got %ld\n", ft_strlen("foo"));
+		printf("KO\n");
 
 	printf("Test 2: ");
 	if (ft_strlen("") == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0, got %ld\n", ft_strlen(""));
+		printf("KO\n");
 
 	printf("Test 3: ");
 	if (ft_strlen(NULL) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected 0");
+		printf("KO\n");
 
 	printf("Test 4: ");
 	if (ft_strlen("x") == 1)
 		printf("OK\n");
 	else
-		printf("KO: Expected 1, got %ld\n", ft_strlen("x"));
+		printf("KO\n");
 
 	printf("Test 5: ");
 	if (ft_strlen("foo b\0ar baz") == 5)
 		printf("OK\n");
 	else
-		printf("KO: Expected 5, got %ld\n", ft_strlen("foo b\0ar baz"));
+		printf("KO\n");
 
 	printf("Test 6: ");
 	if (ft_strlen("foo\tbar\tbaz") == 11)
 		printf("OK\n");
 	else
-		printf("KO: Expected 11, got %ld\n", ft_strlen("foo\tbar\tbaz"));
+		printf("KO\n");
 }
 
 void	test_ft_toupper()
 {
 	printf("\nft_toupper\n");
+
 	printf("Test 1: ");
 	if (ft_toupper(' ') == ' ')
 		printf("OK\n");
 	else
-		printf("KO: Expected \" \" (space), got %c\n", ft_toupper(' '));
+		printf("KO\n");
 
 	printf("Test 2: ");
 	if (ft_toupper('\t') == '\t')
 		printf("OK\n");
 	else
-		printf("KO: Expected \"\t\" (tab), got %c\n", ft_toupper('\t'));
+		printf("KO\n");
 
 	printf("Test 3: ");
 	if (ft_toupper('0') == '0')
 		printf("OK\n");
 	else
-		printf("KO: Expected '0', got %c\n", ft_toupper('0'));
+		printf("KO\n");
 
 	printf("Test 4: ");
 	if (ft_toupper('a') == 'A')
 		printf("OK\n");
 	else
-		printf("KO: Expected 'A', got %c\n", ft_toupper('a'));
+		printf("KO\n");
 
 	printf("Test 5: ");
 	if (ft_toupper('F') == 'F')
 		printf("OK\n");
 	else
-		printf("KO: Expected 'F', got %c\n", ft_toupper('F'));
+		printf("KO\n");
 
 	printf("Test 6: ");
 	if (ft_toupper('!') == '!')
 		printf("OK\n");
 	else
-		printf("KO: Expected '!', got %c\n", ft_toupper('!'));
+		printf("KO\n");
 
 	printf("Test 7: ");
 	if (ft_toupper(':') == ':')
 		printf("OK\n");
 	else
-		printf("KO: Expected ':', got %c\n", ft_toupper(':'));
+		printf("KO\n");
 
 	printf("Test 8: ");
 	if (ft_toupper('^') == '^')
 		printf("OK\n");
 	else
-		printf("KO: Expected '^', got %c\n", ft_toupper('^'));
+		printf("KO\n");
 
 	printf("Test 9: ");
 	if (ft_toupper('~') == '~')
 		printf("OK\n");
 	else
-		printf("KO: Expected '~', got %c\n", ft_toupper('~'));
+		printf("KO\n");
 }
 
 void	test_ft_tolower()
 {
 	printf("\nft_tolower\n");
+
 	printf("Test 1: ");
 	if (ft_tolower(' ') == ' ')
 		printf("OK\n");
 	else
-		printf("KO: Expected \" \" (space), got %c\n", ft_tolower(' '));
+		printf("KO\n");
 
 	printf("Test 2: ");
 	if (ft_tolower('\t') == '\t')
 		printf("OK\n");
 	else
-		printf("KO: Expected \"\t\" (tab), got %c\n", ft_tolower('\t'));
+		printf("KO\n");
 
 	printf("Test 3: ");
 	if (ft_tolower('0') == '0')
 		printf("OK\n");
 	else
-		printf("KO: Expected '0', got %c\n", ft_tolower('0'));
+		printf("KO\n");
 
 	printf("Test 4: ");
 	if (ft_tolower('a') == 'a')
 		printf("OK\n");
 	else
-		printf("KO: Expected 'a', got %c\n", ft_tolower('a'));
+		printf("KO\n");
 
 	printf("Test 5: ");
 	if (ft_tolower('F') == 'f')
 		printf("OK\n");
 	else
-		printf("KO: Expected 'f', got %c\n", ft_tolower('F'));
+		printf("KO\n");
 	
 	printf("Test 6: ");
 	if (ft_tolower('!') == '!')
 		printf("OK\n");
 	else
-		printf("KO: Expected '!', got %c\n", ft_tolower('!'));
+		printf("KO\n");
 
 	printf("Test 7: ");
 	if (ft_tolower(':') == ':')
 		printf("OK\n");
 	else
-		printf("KO: Expected ':', got %c\n", ft_tolower(':'));
+		printf("KO\n");
 
 	printf("Test 8: ");
 	if (ft_tolower('^') == '^')
 		printf("OK\n");
 	else
-		printf("KO: Expected '^', got %c\n", ft_tolower('^'));
+		printf("KO\n");
 
 	printf("Test 9: ");
 	if (ft_tolower('~') == '~')
 		printf("OK\n");
 	else
-		printf("KO: Expected '~', got %c\n", ft_tolower('~'));
+		printf("KO\n");
 }
 
 void	test_ft_strchr()
 {
 	printf("\nft_strchr\n");
+
 	char *s = (char *)calloc(100, sizeof(char));
 
 	printf("Test 1: ");
@@ -524,6 +525,7 @@ void	test_ft_strchr()
 void	test_ft_strrchr()
 {
 	printf("\nft_strrchr\n");
+
 	char *s = (char *)calloc(100, sizeof(char));
 
 	printf("Test 1: ");
@@ -569,6 +571,7 @@ void	test_ft_strrchr()
 void	test_ft_strncmp()
 {
 	printf("\nft_strncmp\n");
+
 	printf("Test 1:  ");
 	if (ft_strncmp("", "", 10) == 0)
 		printf("OK\n");
@@ -669,6 +672,7 @@ void	test_ft_strncmp()
 void	test_ft_memchr()
 {
 	printf("\nft_memchr\n");
+
 	char *s = (char *)malloc(50 * sizeof(char));
 
 	printf("Test 1:  ");
@@ -682,31 +686,31 @@ void	test_ft_memchr()
 	if (ft_memchr(s, 'b', 3) == NULL)
 		printf("OK\n");
 	else
-		printf("KO: Expected (null)\n");
+		printf("KO\n");
 
 	printf("Test 3:  ");
 	if (ft_memchr(NULL, 'b', strlen(s)) == NULL)
 		printf("OK\n");
 	else
-		printf("KO: Expected (null)\n");
+		printf("KO\n");
 
 	printf("Test 4:  ");
 	if (ft_memchr(s, 'F', strlen(s)) == NULL)
 		printf("OK\n");
 	else
-		printf("KO: Expected (null)\n");
+		printf("KO\n");
 
 	printf("Test 5:  ");
 	if (strcmp((char *)ft_memchr(s, 'z', strlen(s)), s+10) == 0)
 		printf("OK\n");
 	else
-		printf("KO: %s\n", s+10);
+		printf("KO\n");
 
 	printf("Test 6:  ");
 	if (strcmp((char *)ft_memchr(s, 'f', strlen(s)), s) == 0)
 		printf("OK\n");
 	else
-		printf("KO: %s\n", s);
+		printf("KO\n");
 
 	printf("Test 7:  ");
 	memset(s, 0, 50);
@@ -714,7 +718,7 @@ void	test_ft_memchr()
 	if ((char *)ft_memchr(s, '\0', 20) == NULL)
 		printf("OK\n");
 	else
-		printf("KO: Expected (null)\n");
+		printf("KO\n");
 
 	printf("Test 8:  ");
 	memset(s, 0, 50);
@@ -722,19 +726,18 @@ void	test_ft_memchr()
 	if (strcmp((char *)ft_memchr(s, '@', strlen(s)), s+4) == 0)
 		printf("OK\n");
 	else
-		printf("KO: Expected @student.42sp.org.br\n");
+		printf("KO\n");
 
 	printf("Test 9:  ");
 	char s2[] = "";
 	if (ft_memchr(s2, 'F', strlen(s)) == NULL)
 		printf("OK\n");
 	else
-		printf("KO: Expected (null)\n");
+		printf("KO\n");
 
 	free(s);
 	s = NULL;
 	
-
 	int tab[] = {10, 20, 30, 40, -42};
 	int *q;
 
@@ -767,6 +770,7 @@ void	test_ft_memchr()
 void	test_ft_memcmp()
 {
 	printf("\nft_memcmp\n");
+
 	printf("Test 1:  ");
 	if (ft_memcmp(NULL, "foo", 3) == 0)
 		printf("OK\n");
@@ -849,6 +853,7 @@ void	test_ft_memcmp()
 void	test_ft_memcpy()
 {
 	printf("\nft_memcpy\n");
+
 	char *cdest = (char *)calloc(50, sizeof(char));
 	char *csrc  = (char *)calloc(50, sizeof(char));
 
@@ -1013,6 +1018,7 @@ void	test_ft_memcpy()
 void	test_ft_memmove()
 {
 	printf("\nft_memmove\n");
+
 	char *cdest = (char *)calloc(50, sizeof(char));
 	char *csrc  = (char *)calloc(50, sizeof(char));
 
@@ -1125,7 +1131,6 @@ void	test_ft_memmove()
 	free(csrc);
 	csrc = NULL;
 
-
 	int *p = (int *)calloc(5, sizeof(int)); // p = new dest address
 	int fail;
 
@@ -1169,6 +1174,7 @@ void	test_ft_memmove()
 void	test_ft_memset()
 {
 	printf("\nft_memset\n");
+
 	char *s = (char *)calloc(30, sizeof(char));
 
 	printf("Test 1:  ");
@@ -1278,6 +1284,7 @@ void	test_ft_memset()
 void	test_ft_bzero()
 {
 	printf("\nft_bzero\n");
+
 	char *s = (char *)calloc(20, sizeof(char));
 
 	printf("Test 1: ");
@@ -1322,7 +1329,6 @@ void	test_ft_bzero()
 	
 	free(s);
 	s = NULL;
-
 
 	int tab[3] = {1, 2, 3};
 	printf("Test 6: ");
@@ -1453,6 +1459,7 @@ void	test_ft_strlcpy()
 void	test_ft_strlcat()
 {
 	printf("\nft_strlcat\n");
+
 	char *dest = (char *)calloc(50, sizeof(char));
 	char *src  = (char *)calloc(50, sizeof(char));
 
@@ -1613,6 +1620,7 @@ void	test_ft_strlcat()
 void	test_ft_strnstr()
 {
 	printf("\nft_strnstr\n");
+
 	char *s  = (char *)calloc(50, sizeof(char));
 
 	printf("Test 1:  ");
@@ -1743,145 +1751,146 @@ void	test_ft_atoi()
 	if (ft_atoi("0") == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 2:  ");
 	if (ft_atoi("-0") == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 3:  ");
 	if (ft_atoi("+0") == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 4:  ");
 	if (ft_atoi("") == 0)  
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 5:  ");
 	if (ft_atoi(NULL) == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 6:  ");
 	if (ft_atoi("123") == 123) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 7:  ");
 	if (ft_atoi("-123") == -123) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 8:  ");
 	if (ft_atoi("+123") == 123) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 9:  ");
 	if (ft_atoi("++123") == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 10: ");
 	if (ft_atoi("+-123") == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 11: ");
 	if (ft_atoi("-+123") == 0)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 12: ");
 	if (ft_atoi("--123") == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 13: ");
 	if (ft_atoi("42foo1234") == 42) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 14: ");
 	if (ft_atoi("123_42") == 123) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 15: ");
 	if (ft_atoi("-42,10") == -42)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 16: ");
 	if (ft_atoi("F1") == 0) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 17: ");
 	if (ft_atoi("\t123") == 123) 
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 18: ");
 	if (ft_atoi(" 123") == 123)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 19: ");
 	if (ft_atoi(" \t\t  \t123") == 123)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 20: ");
 	if (ft_atoi("2147483647") == 2147483647)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 21: ");
 	if (ft_atoi("2147483648") == -2147483648)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 22: ");
 	if (ft_atoi("-2147483648") == -2147483648)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 22: ");
 	if (ft_atoi("-2147483649") == 2147483647)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 	
 }
 
 void	test_ft_calloc()
 {
 	printf("\nft_calloc\n");
+
 	int		*p_int = NULL;
 	int		fail;
 
@@ -1939,7 +1948,7 @@ void	test_ft_calloc()
 
 	// PS: FM says that:
 	// "if the multiplication of nmemb and size would result in integer overflow, then calloc() returns an error"
-	// 	  ft_calloc(-1, 2) ==>  malloc(992394828217348912 * 2) == BOOM💥💥 random access!!
+	// 	  ft_calloc(-1, 2) ==>  malloc(992394828217348912 * 2) = 💥💥 random access
 
 	char	*p_char;
 	printf("Test 5: "); 
@@ -1980,6 +1989,7 @@ void	test_ft_calloc()
 void	test_ft_strdup()
 {
 	printf("\nft_strdup\n");
+
     char    *p = NULL;
 
 	printf("Test 1: ");
@@ -1995,7 +2005,7 @@ void	test_ft_strdup()
 	if (strcmp(p, str) == 0 && p != str)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 3: ");
 	strcpy(str, "Running \tfrom  change");
@@ -2011,7 +2021,7 @@ void	test_ft_strdup()
 	if (strcmp(str, p) == 0 && p != str)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	printf("Test 5: ");
 	strcpy(str, "Leaving\0 heaven");
@@ -2019,39 +2029,1040 @@ void	test_ft_strdup()
 	if (strcmp(str, p) == 0 && p != str)
 		printf("OK\n");
 	else
-		printf("FAIL\n");
+		printf("KO\n");
 
 	free(p);
 	p = NULL;
 }
 
+void	test_ft_substr()
+{
+	printf("\nft_substr\n");
+
+	char	*orig = (char *)calloc(20, sizeof(char));
+	char	*str;
+
+	printf("Test 1: "); // getting first 3 bytes from string (big)
+	strcpy(orig, "foobar baz");
+	str = ft_substr(orig, 0, 3);
+	if (strcmp(str, "foo") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 2: "); // getting 3 middle bytes from string (big)
+	str = ft_substr(orig, 3, 3);
+	if (strcmp(str, "bar") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 3: "); // getting last 3 bytes from string (big)
+	str = ft_substr(orig, 7, 3);
+	if (strcmp(str, "baz") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 4: "); // NULL entry to string (big)
+	if (ft_substr(NULL, 0, 6) == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 5: "); // getting 6 bytes
+	str = ft_substr(orig, 0, 6);
+	if (strcmp(str, "foobar") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	
+	printf("Test 6: "); // jumps over the null-char to get substr
+	char orig2[] = "Say \0goodbye";
+	str = ft_substr(orig2, 5, 4);
+	if (strcmp(str, "good") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 7: "); // getting 1st char only
+	memset(orig, 0, strlen(orig));
+	strcpy(orig, "Sing for the moment");
+	str = ft_substr(orig, 0, 1);
+	if (strcmp(str, "S") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 8: "); // getting last char only
+	str = ft_substr(orig, 18, 1);
+	if (strcmp(str, "t") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 9: "); // a -ve offset would segfault 
+	if (ft_substr(orig, -1, 3) == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	// printf("Test 10: ");
+	// str = ft_substr(orig, 0, -1); // -ve len is going to segfault as well
+	// if (strcmp(str, "Sing for the moment") == 0)
+	// 	printf("OK\n");
+	// else
+	// 	printf("KO\n");
+
+	free(orig);
+	orig = NULL;
+}
+
+void	test_ft_strjoin()
+{
+	printf("\nft_strjoin\n");
+
+	char	*s1 = (char *)calloc(20, sizeof(char));
+	char	*s2 = (char *)calloc(20, sizeof(char));
+	char	*p;
+
+	printf("Test 1: ");
+	strcpy(s1, "Mocking");
+	strcpy(s2, "Bird");
+	p = ft_strjoin(s1, s2);
+	if (strcmp(p, "MockingBird") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 2: ");
+	memset(s1, 0, strlen(s1));
+	memset(s2, 0, strlen(s2));
+	strcpy(s1, "John");
+	strcpy(s2, " Doe");
+	p = ft_strjoin(s1, s2);
+	if (strcmp(p, "John Doe") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 3: ");
+	memset(s1, 0, strlen(s1));
+	memset(s2, 0, strlen(s2));
+	strcpy(s1, "foo");
+	strcpy(s2, " bar");
+	p = ft_strjoin(ft_strjoin(s1, s2), " baz!");
+	if (strcmp(p, "foo bar baz!") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 4: ");
+	memset(s1, 0, strlen(s1));
+	memset(s2, 0, strlen(s2));
+	strcpy(s1, "Thousand ");
+	strcpy(s2, "lies");
+	if (ft_strjoin(s1, NULL) == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 5: ");
+	if (ft_strjoin(NULL, s2) == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 6: ");
+	memset(s1, 0, strlen(s1));
+	memset(s2, 0, strlen(s2));
+	strcpy(s1, "Savior");
+	strcpy(s2, "");
+	p = ft_strjoin(s1, s2);
+	if (strcmp(p, "Savior") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 7: ");
+	memset(s1, 0, strlen(s1));
+	memset(s2, 0, strlen(s2));
+	strcpy(s1, "");
+	strcpy(s2, "Savior");
+	p = ft_strjoin(s1, s2);
+	if (strcmp(p, "Savior") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 8: ");
+	memset(s1, 0, strlen(s1));
+	memset(s2, 0, strlen(s2));
+	strcpy(s1, "");
+	strcpy(s2, "");
+	p = ft_strjoin(s1, s2);
+	if (strcmp(p, "") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	free(s1);
+	s1 = NULL;
+	free(s2);
+	s2 = NULL;
+}
+
+void	test_ft_strtrim()
+{
+	printf("\nt_strtrim\n");
+
+	char	*str = (char *)calloc(20, sizeof(char));
+	char	*p;
+
+	printf("Test 1:  "); // Should remove "fofo" from the beginning and "fo" (end str)
+	strcpy(str, "fofosfo");
+	p = ft_strtrim(str, "fo");
+	if (strcmp(p, "s") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 2:  ");  // inverting "fo" -> "of"
+	p = ft_strtrim(str, "of");
+	if (strcmp(p, "s") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 3:  ");  // another string
+	memset(str, 0, strlen(str));
+	strcpy(str, "foo bar baz");
+	p = ft_strtrim(str, "fz");
+	if (strcmp(p, "oo bar ba") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 4:  "); 
+	p = ft_strtrim(str, " fzo");
+	if (strcmp(p, "bar ba") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 5:  ");  // unavaiable chars shouldn't trim
+	strcpy(str, "foo bar baz");
+	p = ft_strtrim(str, "123");
+	if (strcmp(p, "foo bar baz") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 6:  ");  // trimming whitespaces from string
+	memset(str, 0, strlen(str));
+	strcpy(str, "\t  \t My darling \t\t\n");
+	p = ft_strtrim(str, "\n\t ");
+	if (strcmp(p, "My darling") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 7:  "); // trimming 1st/last bytes
+	memset(str, 0, strlen(str));
+	strcpy(str, "foo bar bazf");
+	p = ft_strtrim(str, "fz");
+	if (strcmp(p, "oo bar ba") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 8:  ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "eminem");
+	p = ft_strtrim(str, "e");
+	if (strcmp(p, "minem") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 9:  "); // NULL entry
+	memset(str, 0, strlen(str));
+	strcpy(str, "foo bar");
+	if (ft_strtrim(NULL, "f") == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 10: "); // same
+	if (ft_strtrim(str, NULL) == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 11: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "zzzzzzzzzzzWzAKEzzzUpzPzzz");
+	p = ft_strtrim(str, "zP");
+	if (strcmp(p, "WzAKEzzzUp") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 12: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "fffffz");
+	p = ft_strtrim(str, "f");
+	if (strcmp(p, "z") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 13: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "zfffff");
+	p = ft_strtrim(str, "f");
+	if (strcmp(p, "z") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 14: "); // trimming all string
+	memset(str, 0, strlen(str));
+	strcpy(str, "xxz");
+	p = ft_strtrim(str, "xz");
+	if (strcmp(p, "") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	free(str);
+	str = NULL;
+}
+
+void	test_ft_split()
+{
+	printf("\nft_split\n");
+
+	char	**tab;
+	int		fail;
+
+	printf("Test 1:  ");
+	char	*A[3] = {"foo", "bar", 0};
+	fail = 0;
+	tab = ft_split("foo bar", ' ');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], A[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 2:  ");
+	char	*B[4] = {"foo", "bar", "baz", 0};
+	fail = 0;
+	tab = ft_split("foo bar baz", ' ');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], B[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 3:  ");
+	char	*C[4] = {"foo", "bar", "baz", 0};
+	fail = 0;
+	tab = ft_split("foo.bar.baz", '.');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], C[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 4:  ");
+	char	*D[3] = {"foo", "barbaz", 0};
+	fail = 0;
+	tab = ft_split(".......foo.barbaz", '.');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], D[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 5:  ");
+	char	*E[3] = {"foobar", "baz", 0};
+	fail = 0;
+	tab = ft_split("foobar.baz.............", '.');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], E[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 6:  ");
+	char	*F[3] = {"foo", "bar", 0};
+	fail = 0;
+	tab = ft_split("....foo.bar.............", '.');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], F[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 7:  ");
+	char	*G[3] = {"foo", "bar", 0};
+	fail = 0;
+	tab = ft_split("....foo.........bar.......", '.');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], G[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 8:  ");
+	char	*H[10] = {"the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog", 0};
+	fail = 0;
+	tab = ft_split("_the___quick_brown_fox_jumps____over_the___________lazy_dog____________", '_');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], H[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+
+	printf("Test 9:  ");
+	fail = 0;
+	if (ft_split(NULL, '.') == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 10: ");
+	char	*I[6] = {"f", "o", "o ba", "r", " b az", 0};
+	fail = 0;
+	tab = ft_split("f.o.o ba.r. b az", '.');
+	for (int i=0; tab[i]; ++i)
+		if (strcmp(tab[i], I[i]) != 0)
+			fail = 1;
+	if (!fail)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(tab);
+	tab = NULL;
+}
+
+void	test_ft_itoa()
+{
+	printf("\nft_itoa\n");
+
+	char	*p = (char *)calloc(20, sizeof(char));
+
+	printf("Test 1:  ");
+	p = ft_itoa(1);
+	if (strcmp(p, "1") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 2:  ");
+	p = ft_itoa(0);
+	if (strcmp(p, "0") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 3:  ");
+	p = ft_itoa(1234);
+	if (strcmp(p, "1234") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 4:  ");
+	p = ft_itoa(37829723);
+	if (strcmp(p, "37829723") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 5:  ");
+	p = ft_itoa(-1);
+	if (strcmp(p, "-1") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 6:  ");
+	p = ft_itoa(-123);
+	if (strcmp(p, "-123") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 7:  ");
+	p = ft_itoa(2147483647);
+	if (strcmp(p, "2147483647") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 8:  ");
+	p = ft_itoa(-2147483648);
+	if (strcmp(p, "-2147483648") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 9:  ");
+	p = ft_itoa(-0);
+	if (strcmp(p, "0") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 10: ");
+	p = ft_itoa(+1234);
+	if (strcmp(p, "1234") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 11: ");
+	p = ft_itoa(-85429752);
+	if (strcmp(p, "-85429752") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 12: ");
+	p = ft_itoa(0xA);
+	if (strcmp(p, "10") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 13: ");
+	p = ft_itoa(0b00010001);
+	if (strcmp(p, "17") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	free(p);
+	p = NULL;
+}
+
+// Test functions for ft_strmapi
+char	caesar_shift1(unsigned int n, char ch)
+{
+	n = 1;
+	return (n + ch);
+}
+char	caesar_shift2(unsigned int n, char ch)
+{
+	return (n + ch);
+}
+void	test_ft_strmapi()
+{
+	printf("\nft_strmapi\n");
+
+	typedef char (*t_fn)(unsigned int, char);
+	t_fn	f1 = caesar_shift1;
+	t_fn	f2 = caesar_shift2;
+
+	char	*p = (char *)calloc(20, sizeof(char));
+
+	printf("Test 1: ");
+	p = ft_strmapi("abc", f1);
+	if (strcmp(p, "bcd") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 2: ");
+	p = ft_strmapi("abc", f2);
+	if (strcmp(p, "ace") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 3: ");
+	p = ft_strmapi("You are way to late", f1);
+	if (strcmp(p, "Zpv!bsf!xbz!up!mbuf") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 4: ");
+	p = ft_strmapi("", f2);
+	if (strcmp(p, "") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 5: ");
+	p = ft_strmapi("", f1);
+	if (strcmp(p, "") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 6: ");
+	if (ft_strmapi(NULL, f1) == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 7: ");
+	if (ft_strmapi("abc", NULL) == NULL)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 8: ");
+	p = ft_strmapi("1234", f2);
+	if (strcmp(p, "1357") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 9: ");
+	p = ft_strmapi("-1234", f2);
+	if (strcmp(p, "-2468") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	free(p);
+	p = NULL;
+}
+
+// Test functions for ft_striteri
+void	inc(unsigned int i, char *s) { *s += i; }
+void	dec(unsigned int i, char *s) { *s -= i; }
+void	test_ft_striteri()
+{
+	printf("\nft_striteri\n");
+
+	typedef void	(*t_fn)(unsigned int, char *);
+	t_fn	f1 = inc;
+	t_fn	f2 = dec;
+
+	char	*str = (char *)calloc(30, sizeof(char));
+
+	printf("Test 1: ");
+	strcpy(str, "0000000000");
+	ft_striteri(str, f1);
+	if(strcmp(str, "0123456789") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 2: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "0123456789");
+	ft_striteri(str, f2);
+	if(strcmp(str, "0000000000") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 3: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "0");
+	ft_striteri(str, f1);
+	if(strcmp(str, "0") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 4: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "0");
+	ft_striteri(str, f2);
+	if(strcmp(str, "0") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 5: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "outcast");
+	ft_striteri(str, f1);
+	if(strcmp(str, "ovvfexz") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+
+	printf("Test 6: ");
+	memset(str, 0, strlen(str));
+	strcpy(str, "outcast");
+	ft_striteri(str, f2);
+	if(strcmp(str, "otr`]nn") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	free(str);
+	str = NULL;
+
+	printf("Test 7: ");
+	ft_striteri(NULL, f2);
+	printf("OK\n"); // or segfault
+
+	printf("Test 8: ");
+	ft_striteri("Fly away with me", NULL);
+	printf("OK\n"); // or segfault
+}
+
+void	test_ft_putchar_fd()
+{
+	printf("\nft_putchar_fd\n");
+
+	int		fd;
+	char	*buff = (char *)calloc(11, sizeof(char));
+	char	*str = (char *)calloc(11, sizeof(char));
+
+	printf("Test 1: ");
+	fd = open("test_putchar", O_RDWR | O_CREAT);
+	strcpy(str, "4");
+	ft_putchar_fd('4', fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 2);
+	if(strcmp(buff, "4") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putchar");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 2: ");
+	fd = open("test_putchar", O_RDWR | O_CREAT);
+	strcpy(str, "F");
+	ft_putchar_fd('F', fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 2);
+	if(strcmp(buff, "F") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putchar");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 3: ");
+	fd = open("test_putchar", O_RDWR | O_CREAT);
+	strcpy(str, "\t");
+	ft_putchar_fd('\t', fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 2);
+	if(strcmp(buff, "\t") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putchar");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 4: ");
+	ft_putchar_fd('F', -1);
+	printf("OK\n");
+
+	printf("Test 5: ");
+	ft_putchar_fd(0, fd);
+	printf("OK\n");
+
+	free(buff);
+	buff = NULL;
+	free(str);
+	str = NULL;
+}
+
+void	test_ft_putstr_fd()
+{
+	printf("\nft_putstr_fd\n");
+
+	int		fd;
+	char	*buff = (char *)calloc(11, sizeof(char));
+	char	*str = (char *)calloc(11, sizeof(char));
+
+	printf("Test 1: ");
+	fd = open("test_putstr", O_RDWR | O_CREAT);
+	strcpy(str, "Light");
+	ft_putstr_fd(str, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 6);
+	if(strcmp(buff, "Light") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putstr");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 2: ");
+	fd = open("test_putstr", O_RDWR | O_CREAT);
+	strcpy(str, "Lonely");
+	ft_putstr_fd(str, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 7);
+	if(strcmp(buff, "Lonely") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putstr");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 3: ");
+	fd = open("test_putstr", O_RDWR | O_CREAT);
+	strcpy(str, "intro_III");
+	ft_putstr_fd(str, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 10);
+	if(strcmp(buff, "intro_III") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putstr");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 4: ");
+	ft_putstr_fd(NULL, fd);
+	printf("OK\n");
+
+	printf("Test 5: ");
+	ft_putstr_fd(str, -1);
+	printf("OK\n");
+
+	free(buff);
+	buff = NULL;
+	free(str);
+	str = NULL;
+}
+
+void	test_ft_putendl_fd()
+{
+	printf("\nft_putendl_fd\n");
+
+	int		fd;
+	char	*buff = (char *)calloc(11, sizeof(char));
+	char	*str = (char *)calloc(11, sizeof(char));
+
+	printf("Test 1: ");
+	fd = open("test_putendl", O_RDWR | O_CREAT);
+	strcpy(str, "Light");
+	ft_putendl_fd(str, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 8);
+	if(strcmp(buff, "Light\n") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putendl");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 2: ");
+	fd = open("test_putendl", O_RDWR | O_CREAT);
+	strcpy(str, "42");
+	ft_putendl_fd(str, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 4);
+	if(strcmp(buff, "42\n") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putendl");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 3: ");
+	fd = open("test_putendl", O_RDWR | O_CREAT);
+	strcpy(str, "Leave_me_alone");
+	ft_putendl_fd(str, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, strlen(str)+2);
+	if(strcmp(buff, "Leave_me_alone\n") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putendl");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 4: "); // NULL entry
+	ft_putendl_fd(NULL, fd);
+	printf("OK\n");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	printf("Test 5: "); // -ve fd
+	ft_putendl_fd(str, -1);
+	printf("OK\n");
+	memset(buff, 0, strlen(buff));
+	memset(str, 0, strlen(str));
+
+	free(buff);
+	buff = NULL;
+	free(str);
+	str = NULL;
+}
+
+void	test_ft_putnbr_fd()
+{
+	printf("\nft_putnbr_fd\n");
+
+	int		fd;
+	char	*buff = (char *)calloc(11, sizeof(char));
+
+	fd = open("test_putnbr", O_RDWR | O_CREAT);
+
+	printf("Test 1: ");
+	ft_putnbr_fd(4, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 2);
+	if(strcmp(buff, "4") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putnbr");
+	memset(buff, 0, strlen(buff));
+
+	printf("Test 2: ");
+	fd = open("test_putnbr", O_RDWR | O_CREAT);
+	ft_putnbr_fd(1337, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 5);
+	if(strcmp(buff, "1337") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putnbr");
+	memset(buff, 0, strlen(buff));
+
+	printf("Test 3: ");
+	fd = open("test_putnbr", O_RDWR | O_CREAT);
+	ft_putnbr_fd(0, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 2);
+	if(strcmp(buff, "0") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putnbr");
+	memset(buff, 0, strlen(buff));
+
+	printf("Test 4: ");
+	fd = open("test_putnbr", O_RDWR | O_CREAT);
+	ft_putnbr_fd(-123, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 5);
+	if(strcmp(buff, "-123") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putnbr");
+	memset(buff, 0, strlen(buff));
+
+	printf("Test 5: ");
+	fd = open("test_putnbr", O_RDWR | O_CREAT);
+	ft_putnbr_fd(2147483647, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 11);
+	if(strcmp(buff, "2147483647") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putnbr");
+	memset(buff, 0, strlen(buff));
+
+	printf("Test 6: ");
+	fd = open("test_putnbr", O_RDWR | O_CREAT);
+	ft_putnbr_fd(-2147483648, fd);
+	lseek(fd, SEEK_SET, 0);
+	read(fd, buff, 12);
+	if(strcmp(buff, "-2147483648") == 0)
+		printf("OK\n");
+	else
+		printf("KO\n");
+	unlink("./test_putnbr");
+	memset(buff, 0, strlen(buff));
+
+	printf("Test 7: "); // -ve fd
+	ft_putnbr_fd(42, -1);
+	printf("OK\n");
+
+	free(buff);
+	buff = NULL;
+}
+
 int		main()
 {
-	// test_ft_isalpha();
-	// test_ft_isdigit();
-	// test_ft_isalnum();
-	// test_ft_isascii();
-	// test_ft_isprint();
-	// test_ft_strlen();
-	// test_ft_toupper();
-	// test_ft_tolower();
-	// test_ft_strchr();
-	// test_ft_strrchr();
-	// test_ft_strncmp();
-	// test_ft_memchr();
-	// test_ft_memcmp();
-	// test_ft_memcpy();
-	// test_ft_memmove();
-	// test_ft_memset();
-	// test_ft_bzero();
-	// test_ft_strlcpy();
-	// test_ft_strlcat();
-	// test_ft_strnstr();
-	// test_ft_atoi();
-	// test_ft_calloc();
-	// test_ft_strdup();
-
-
+	test_ft_isalpha();
+	test_ft_isdigit();
+	test_ft_isalnum();
+	test_ft_isascii();
+	test_ft_isprint();
+	test_ft_strlen();
+	test_ft_toupper();
+	test_ft_tolower();
+	test_ft_strchr();
+	test_ft_strrchr();
+	test_ft_strncmp();
+	test_ft_memchr();
+	test_ft_memcmp();
+	test_ft_memcpy();
+	test_ft_memmove();
+	test_ft_memset();
+	test_ft_bzero();
+	test_ft_strlcpy();
+	test_ft_strlcat();
+	test_ft_strnstr();
+	test_ft_atoi();
+	test_ft_calloc();
+	test_ft_strdup();
+	test_ft_substr();
+	test_ft_strjoin();
+	test_ft_strtrim();
+	test_ft_split();
+	test_ft_itoa();
+	test_ft_strmapi();
+	test_ft_striteri();
+	test_ft_putchar_fd();
+	test_ft_putstr_fd();
+	test_ft_putendl_fd();
+	test_ft_putnbr_fd();
 
 	return (0);
 }

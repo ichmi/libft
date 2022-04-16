@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/04/09 16:30:12 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/04/15 14:28:44 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,17 @@ ft_strnstr.c\
 ft_strrchr.c\
 ft_tolower.c\
 ft_toupper.c\
+ft_substr.c\
+ft_strjoin.c\
+ft_strtrim.c\
+ft_split.c\
+ft_itoa.c\
+ft_strmapi.c\
+ft_striteri.c\
+ft_putchar_fd.c\
+ft_putstr_fd.c\
+ft_putendl_fd.c\
+ft_putnbr_fd.c\
 
 # Tudo na mesma pasta
 OBJS = ${SRCS:%.c=%.o}

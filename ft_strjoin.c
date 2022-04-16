@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 09:21:49 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/13 09:44:23 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/04/11 14:08:06 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/04/11 14:27:27 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	char	*buff;
+	char	*pb;
+	size_t	size;
 
-	if (!dest || !src)
-		return (0);
-	if (size == 0)
-		return (ft_strlen(src));
-	i = ft_strlen(dest);
-	if (size < i)
-		return (ft_strlen(src) + size);
-	while (i < (size - 1) && *src)
-	{
-		dest[i] = *(src++);
-		i++;
-	}
-	dest[i] = '\0';
-	return (i + ft_strlen(src));
+	if (!s1 || !s2)
+		return (NULL);
+	size = ft_strlen(s1) + ft_strlen(s2);
+	buff = (char *)malloc(size + 1);
+	if (!buff)
+		return (NULL);
+	pb = buff;
+	ft_strlcpy(buff, s1, -1);
+	while (*buff)
+		buff++;
+	ft_strlcat(buff, s2, -1);
+	return (pb);
 }

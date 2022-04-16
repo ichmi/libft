@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   t1.c                                               :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 08:22:30 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/11 10:31:51 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/04/15 14:28:08 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/04/15 14:51:06 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-
-int main()
+void	ft_putnbr_fd(int n, int fd)
 {
-
-    return (0);
+	if (fd < 0)
+		return ;
+	ft_putstr_fd(ft_itoa(n), fd);
 }
