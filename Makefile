@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/04/16 12:26:47 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/04/16 16:03:59 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,9 +60,6 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 	@ar -rc $@ $^
-
-a: ${NAME} clean
-	@${CC} ${CFLAGS} tests/main.c -L. -lft -o $@
 
 %.o: %.c
 	@${CC} -c $< -o $@
