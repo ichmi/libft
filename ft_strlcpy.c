@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 20:12:27 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/10 13:58:17 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/16 16:26:26 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	blefts = n;
 	if (blefts != 0)
 		while (--blefts)
-			if ((*dest++ = *src++) == '\0')
+			if ((*dest++ = *src++) == '\0') // ASSIGN_IN_CONTROL
 				break ;
 	if (blefts == 0)
 	{

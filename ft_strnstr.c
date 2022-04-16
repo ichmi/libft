@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 09:36:09 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/10 16:30:02 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/16 16:27:27 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (big[i + j] == little[j])
 		{
 			if (j == (substr_len - 1))
-				return ((char*)&big[i]);
+				return ((char *)&big[i]);
 			j++;
 		}
 		i++;

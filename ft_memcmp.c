@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:51:03 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/08 00:07:23 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/16 16:21:42 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	p1 = s1;
 	p2 = s2;
-    while (n--)
+	while (n--)
 	{
-        if (*p1 != *p2)
-            return (*p1 - *p2);
+		if (*p1 != *p2)
+			return (*p1 - *p2);
 		p1++;
 		p2++;
 	}
-    return (0);
+	return (0);
 }

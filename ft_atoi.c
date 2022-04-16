@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:06:15 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/07 18:29:46 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/16 16:18:22 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	ft_atoi(const char *nptr)
 		return (0);
 	while (ft_isspace(nptr[i]))
 		i++;
-
 	if (nptr[i] == '-')
 	{
 		is_neg *= -1;
