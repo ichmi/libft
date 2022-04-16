@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 17:28:17 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/16 12:19:16 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/16 12:32:45 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -1351,7 +1351,7 @@ void	test_ft_strlcpy()
 {
 	printf("\nft_strlcpy\n");
 
-	char *dest = (char *)calloc(5, sizeof(char));
+	char *dest = (char *)calloc(30, sizeof(char));
 	char *src  = (char *)calloc(30, sizeof(char));
 
 	printf("Test 1:  ");
@@ -3013,7 +3013,7 @@ void	test_ft_putnbr_fd()
 	lseek(fd, SEEK_SET, 0);
 	read(fd, buff, 12);
 	if(strcmp(buff, "-2147483648") == 0)
-		printf("OK\n");
+		printf("\x1b[38:5:10mOK\x1b[0m\n");
 	else
 		printf("KO\n");
 	unlink("./test_putnbr");
@@ -3063,6 +3063,9 @@ int		main()
 	test_ft_putstr_fd();
 	test_ft_putendl_fd();
 	test_ft_putnbr_fd();
+
+
+
 
 	return (0);
 }

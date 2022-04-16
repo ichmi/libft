@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/04/15 14:28:44 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/04/16 12:26:47 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-# Source files: 23
 SRCS = \
 ft_atoi.c\
 ft_bzero.c\
@@ -55,7 +54,6 @@ ft_putstr_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c\
 
-# Tudo na mesma pasta
 OBJS = ${SRCS:%.c=%.o}
 
 all: ${NAME}
@@ -63,8 +61,8 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	@ar -rc $@ $^
 
-a: ${NAME} clean # dont forget to remove <bsd>
-	@${CC} ${CFLAGS} tests/main.c -L. -lft -lbsd -o $@
+a: ${NAME} clean
+	@${CC} ${CFLAGS} tests/main.c -L. -lft -o $@
 
 %.o: %.c
 	@${CC} -c $< -o $@
