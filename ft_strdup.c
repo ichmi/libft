@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:28:36 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/16 16:25:30 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/18 13:42:51 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 char	*ft_strdup(const char *s)
 {
-	char	*buffer;
-	char	*pbuff;
+	char	*buff;
+	char	*pb;
 
 	if (!s)
 		return (NULL);
-	buffer = (char *)malloc(ft_strlen(s));
-	if (!buffer)
+	buff = (char *)ft_calloc((ft_strlen(s) + 1), sizeof(char));
+	if (!buff)
 		return (NULL);
-	pbuff = buffer;
+	pb = buff;
 	while (*s)
-		*buffer++ = *(char *)s++;
-	*buffer = '\0';
-	return (pbuff);
+		*buff++ = *(char *)s++;
+	return (pb);
 }

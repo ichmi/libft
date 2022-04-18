@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 11:02:49 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/14 15:06:22 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/18 14:16:10 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
 	char			*buff;
+	unsigned int	i;
 
 	if (s && f)
 	{

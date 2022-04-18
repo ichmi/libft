@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 09:21:49 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/13 09:44:23 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/18 13:57:27 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	if (size < i)
 		return (ft_strlen(src) + size);
 	while (i < (size - 1) && *src)
-	{
-		dest[i] = *(src++);
-		i++;
-	}
+		dest[i++] = *(src++);
 	dest[i] = '\0';
 	return (i + ft_strlen(src));
 }

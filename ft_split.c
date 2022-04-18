@@ -6,21 +6,22 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 15:29:42 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/14 16:47:50 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/18 13:33:48 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft__gtoken_size(const char *s, const char ch)
+static size_t	ft__gtoken_size(const char *s, const char c)
 {
 	size_t	i;
 	size_t	len;
 
+	i = 0;
 	len = 0;
-	while (s[i] == ch)
+	while (s[i] == c)
 		i++;
-	while (s[i] != ch && s[i])
+	while (s[i] != c && s[i])
 	{
 		i++;
 		len++;
@@ -28,7 +29,7 @@ static size_t	ft__gtoken_size(const char *s, const char ch)
 	return (len);
 }
 
-static size_t	ft__gntokens(const char *s, const char ch)
+static size_t	ft__gntokens(const char *s, const char c)
 {
 	size_t	i;
 	size_t	n;
@@ -37,11 +38,11 @@ static size_t	ft__gntokens(const char *s, const char ch)
 	n = 0;
 	while (s[i])
 	{
-		while (s[i] == ch)
+		while (s[i] == c)
 			i++;
-		if (s[i] != ch && s[i])
+		if (s[i] != c && s[i])
 			n++;
-		while (s[i] != ch && s[i])
+		while (s[i] != c && s[i])
 			i++;
 	}
 	return (n);
@@ -49,12 +50,12 @@ static size_t	ft__gntokens(const char *s, const char ch)
 
 static char	*ft__newstr(size_t size)
 {
-	char	*ptr;
+	char	*p;
 
-	ptr = (char *)ft_calloc((size + 1), sizeof(char));
-	if (!ptr)
+	p = (char *)ft_calloc((size + 1), sizeof(char));
+	if (!p)
 		return (NULL);
-	return (ptr);
+	return (p);
 }
 
 char	**ft_split(char const *s, char c)

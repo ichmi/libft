@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:06:15 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/16 16:18:22 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/18 13:04:00 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	result;
-	int	is_neg;
+	int	sign;
 
 	result = 0;
-	is_neg = 1;
+	sign = 1;
 	i = 0;
 	if (!nptr)
 		return (0);
@@ -34,7 +34,7 @@ int	ft_atoi(const char *nptr)
 		i++;
 	if (nptr[i] == '-')
 	{
-		is_neg *= -1;
+		sign *= -1;
 		i++;
 	}
 	else if (nptr[i] == '+')
@@ -44,5 +44,5 @@ int	ft_atoi(const char *nptr)
 		result = (result * 10) + nptr[i] - '0';
 		i++;
 	}
-	return (result * is_neg);
+	return (result * sign);
 }
