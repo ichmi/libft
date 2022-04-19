@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/04/16 16:03:59 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/04/19 14:04:16 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,12 @@ ft_putchar_fd.c\
 ft_putstr_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c\
+ft_lstnew_bonus.c\
+ft_lstadd_front_bonus.c\
+ft_lstsize_bonus.c\
+ft_lstlast_bonus.c\
+ft_lstadd_back_bonus.c\
+ft_lstdelone_bonus.c\
 
 OBJS = ${SRCS:%.c=%.o}
 
