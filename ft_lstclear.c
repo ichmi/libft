@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:36:37 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/19 20:05:26 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:03:12 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (*lst)
 	{
 		del(*lst->content);
+		
 		free(lst);
 	}
 }

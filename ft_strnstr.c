@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 09:36:09 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/16 16:27:27 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/20 00:57:22 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,27 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		substr_len;
-	size_t		i;
-	size_t		j;
+	size_t	b_len;
+	size_t	l_len;
+	size_t	size;
 
 	if (!big || !little)
 		return (NULL);
-	substr_len = ft_strlen(little);
-	if (!substr_len)
+	if (!*little)
 		return ((char *)big);
-	i = 0;
-	j = 0;
-	while (len-- && big[i])
+	b_len = ft_strlen(big);
+	l_len = ft_strlen(little);
+	if (len < l_len || b_len < l_len)
+		return (NULL);
+	if (b_len > len)
+		size = len;
+	else
+		size = b_len;
+	while (size-- >= l_len)
 	{
-		while (big[i + j] == little[j])
-		{
-			if (j == (substr_len - 1))
-				return ((char *)&big[i]);
-			j++;
-		}
-		i++;
+		if (ft_strncmp(big, little, l_len) == 0)
+			return ((char *)big);
+		big++;
 	}
 	return (NULL);
 }

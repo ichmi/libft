@@ -6,13 +6,13 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:06:15 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/18 13:04:00 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:06:30 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(const char ch)
+static int	ft__isspace(const char ch)
 {
 	if ((ch >= 9 && ch <= 13) || ch == ' ')
 		return (1);
@@ -30,7 +30,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	if (!nptr)
 		return (0);
-	while (ft_isspace(nptr[i]))
+	while (ft__isspace(nptr[i]))
 		i++;
 	if (nptr[i] == '-')
 	{

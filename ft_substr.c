@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 13:01:36 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/18 14:52:02 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/19 22:59:49 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*buff;
 
-	if (!s || (int)start < 0)
+	if (!s || start > ft_strlen(s))
 		return (NULL);
 	buff = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!buff)

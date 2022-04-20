@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 11:16:09 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/07 21:18:28 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/20 00:20:56 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,23 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (!s1 || !s2)
+	unsigned char	*p1;
+	unsigned char	*p2;
+
+	if (!s1 || !s2 || n == 0)
 		return (0);
-	if (n == 0)
-		return (0);
-	while (*s1 == *s2 && *s1 && *s2 && --n)
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
+	while (*p1 == *p2 && *p1 && *p2 && --n)
 	{
-		s1++;
-		s2++;
+		p1++;
+		p2++;
 	}
-	return (*s1 - *s2);
+	return (*p1 - *p2);
 }
+
+// 6, 5, 4, 3, 2
+//     1
+// test\200
+// test\0
+//     2

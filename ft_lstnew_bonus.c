@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/18 21:02:35 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/19 15:31:19 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:07:02 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	node = (t_list *)malloc(sizeof(*node));
 	if (!node)
 		return (NULL);
-	node->content = content; // munmap_chunk(): invalid pointer, solves w/ ft_strdup(content);
+	node->content = content;
 	node->next = NULL;
 	return (node);
 }

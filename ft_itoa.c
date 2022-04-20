@@ -6,13 +6,13 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 12:32:01 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/14 16:55:17 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:05:55 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_ndigits(int num)
+static int	ft__ndigits(int num)
 {
 	int	digits;
 
@@ -25,7 +25,7 @@ static int	ft_ndigits(int num)
 	return (digits);
 }
 
-static void	*ft_strrev(char *s)
+static void	*ft__strrev(char *s)
 {
 	char	temp;
 	int		i;
@@ -42,7 +42,7 @@ static void	*ft_strrev(char *s)
 	return (s);
 }
 
-static void	*ft_wtobuff(char *s, int n, int is_nve)
+static void	*ft__wtobuff(char *s, int n, int is_nve)
 {
 	if (is_nve)
 		*s++ = '-';
@@ -69,15 +69,15 @@ char	*ft_itoa(int n)
 		nve = 1;
 		n *= -1;
 	}
-	buff = (char *)ft_calloc((ft_ndigits(n) + 2), sizeof(char));
+	buff = (char *)ft_calloc((ft__ndigits(n) + 2), sizeof(char));
 	if (!buff)
 		return (NULL);
-	ft_wtobuff(buff, n, nve);
+	ft__wtobuff(buff, n, nve);
 	if (nve)
 	{
-		ft_strrev(buff + 1);
+		ft__strrev(buff + 1);
 		return (buff);
 	}
-	ft_strrev(buff);
+	ft__strrev(buff);
 	return (buff);
 }
