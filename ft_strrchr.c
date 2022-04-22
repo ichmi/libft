@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:05:29 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/16 16:24:02 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/22 19:56:38 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 		i++;
-	if (c == '\0')
-		return ((char *)&s[i + 1]);
 	while (i >= 0)
 	{
 		if (s[i] == c)

@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 12:32:01 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/20 01:05:55 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/22 14:57:49 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ char	*ft_itoa(int n)
 {
 	char	*buff;
 	int		nve;
-	int		i;
 
 	if (n == 0)
 		return (ft_strdup("0"));

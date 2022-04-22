@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 11:16:09 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/20 00:20:56 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/22 15:30:30 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (*p1 - *p2);
 }
-
-// 6, 5, 4, 3, 2
-//     1
-// test\200
-// test\0
-//     2

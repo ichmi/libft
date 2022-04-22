@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:22:45 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/18 13:02:14 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/22 14:13:07 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isdigit(c))
-		return (1);
-	if (ft_isalpha(c))
+	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
 	return (0);
 }
