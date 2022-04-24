@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 20:12:27 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/18 12:45:02 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 20:39:32 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-	if (!dest || !src)
-		return (0);
 	if ((ft_strlen(src) + 1) < n)
 		ft_memcpy(dest, src, (ft_strlen(src) + 1));
 	else if (n != 0)

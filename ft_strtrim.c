@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:36:43 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/20 01:08:47 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 20:45:38 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	const char	*last;
 	size_t		size;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	size = ft_strlen(s1);
 	last = s1 + (size - 1);
 	while (ft__setoff(set, *s1))

@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 20:32:46 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/11 10:27:10 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 19:03:54 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char	*ps;
 	unsigned char		*pd;
 
-	if (!dest || !src)
-		return (NULL);
+	if (src == dest || n == 0)
+		return (dest);
 	if (dest < src)
 	{
 		ps = (unsigned char *)src;

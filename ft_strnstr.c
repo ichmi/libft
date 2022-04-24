@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 09:36:09 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/20 00:57:22 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 20:42:51 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	l_len;
 	size_t	size;
 
-	if (!big || !little)
-		return (NULL);
 	if (!*little)
 		return ((char *)big);
 	b_len = ft_strlen(big);

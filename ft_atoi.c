@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:06:15 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/22 14:06:29 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 20:49:10 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,13 @@ static int	ft__isspace(const char ch)
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	result;
-	int	sign;
+	size_t	i;
+	long	result;
+	long	sign;
 
 	result = 0;
 	sign = 1;
 	i = 0;
-	if (!nptr)
-		return (0);
 	while (ft__isspace(nptr[i]))
 		i++;
 	if (nptr[i] == '-')

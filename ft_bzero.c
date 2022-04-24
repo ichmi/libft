@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 17:36:21 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/08 19:28:08 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 20:49:29 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (!s)
-		return ;
 	while (n--)
 		*((unsigned char *)s++) = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 15:28:36 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/18 13:42:51 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 20:55:33 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strdup(const char *s)
 	char	*buff;
 	char	*pb;
 
-	if (!s)
-		return (NULL);
 	buff = (char *)ft_calloc((ft_strlen(s) + 1), sizeof(char));
 	if (!buff)
 		return (NULL);

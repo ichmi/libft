@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 16:19:48 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/20 19:06:07 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/23 16:23:18 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,11 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*p;
-
-	if (!s || c == 0)
-		return (NULL);
-	p = (unsigned char *)s;
 	while (n--)
 	{
-		if (*p == (unsigned char)c)
-			return (p);
-		p++;
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((void *)s);
+		s++;
 	}
 	return (NULL);
 }
