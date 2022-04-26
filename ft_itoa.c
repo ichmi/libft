@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 12:32:01 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/22 14:57:49 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/25 20:49:03 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	ft__ndigits(int num)
 	return (digits);
 }
 
-static void	*ft__strrev(char *s)
+static void	ft__strrev(char *s)
 {
 	char	temp;
 	int		i;
@@ -39,10 +39,9 @@ static void	*ft__strrev(char *s)
 		*(s + i++) = *(s + j);
 		*(s + j--) = temp;
 	}
-	return (s);
 }
 
-static void	*ft__wtobuff(char *s, int n, int is_nve)
+static void	ft__wtobuff(char *s, int n, int is_nve)
 {
 	if (is_nve)
 		*s++ = '-';
