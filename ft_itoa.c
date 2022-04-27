@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 12:32:01 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/25 20:49:03 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/25 23:07:32 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,19 @@ static void	ft__wtobuff(char *s, int n, int is_nve)
 	}
 }
 
+static char	*ft__newstr(size_t size, int nve)
+{
+	char	*p;
+
+	if (nve)
+		p = (char *)ft_calloc((size + 2), sizeof(char));
+	else
+		p = (char *)ft_calloc((size + 1), sizeof(char));
+	if (!p)
+		return (NULL);
+	return (p);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*buff;
@@ -67,7 +80,7 @@ char	*ft_itoa(int n)
 		nve = 1;
 		n *= -1;
 	}
-	buff = (char *)ft_calloc((ft__ndigits(n) + 2), sizeof(char));
+	buff = ft__newstr(ft__ndigits(n), nve);
 	if (!buff)
 		return (NULL);
 	ft__wtobuff(buff, n, nve);

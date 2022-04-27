@@ -6,9 +6,11 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 09:31:10 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/04 09:33:41 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 13:27:59 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

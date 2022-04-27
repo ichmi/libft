@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 14:28:08 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/20 01:20:21 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 11:34:08 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long long	num;
 
-	if (fd < 0)
-		return ;
 	num = n;
 	if (num < 0)
 	{

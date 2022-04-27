@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 13:50:55 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/21 11:49:01 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/04/19 13:40:31 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/04/27 11:26:00 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next)
+	int	n;
+
+	n = 0;
+	while (lst)
+	{
+		n++;
 		lst = lst->next;
-	return (lst);
+	}
+	return (n);
 }

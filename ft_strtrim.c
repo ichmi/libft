@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:36:43 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/23 20:45:38 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 12:16:25 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ft__setoff(const char *set, const char ch)
 {
 	while (*set)
-		if (ch == *set++)
+		if ((unsigned char)ch == (unsigned char)*set++)
 			return (1);
 	return (0);
 }
@@ -23,14 +23,8 @@ static int	ft__setoff(const char *set, const char ch)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*last;
-	size_t		size;
 
-	if (!s1)
-		return (NULL);
-	if (!set)
-		return (ft_strdup(s1));
-	size = ft_strlen(s1);
-	last = s1 + (size - 1);
+	last = s1 + (ft_strlen(s1) - 1);
 	while (ft__setoff(set, *s1))
 		s1++;
 	while (ft__setoff(set, *last))

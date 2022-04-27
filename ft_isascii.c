@@ -6,9 +6,11 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:23:10 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/14 16:54:21 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:30:08 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

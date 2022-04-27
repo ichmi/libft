@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 15:29:42 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/18 13:33:48 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 11:37:31 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	size_t	k;
 
-	if (!s)
-		return (NULL);
 	token = (char **)ft_calloc((ft__gntokens(s, c) + 1), sizeof(*token));
 	if (!token)
 		return (NULL);

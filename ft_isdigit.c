@@ -6,9 +6,11 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 07:29:20 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/14 16:54:05 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:30:12 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

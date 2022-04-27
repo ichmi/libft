@@ -6,9 +6,11 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:23:22 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/19 23:42:58 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 14:30:19 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

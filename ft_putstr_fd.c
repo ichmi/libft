@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 11:50:01 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/18 13:53:35 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/04/27 11:35:09 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s || fd < 0)
-		return ;
 	while (*s)
-		ft_putchar_fd(*s++, fd);
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
