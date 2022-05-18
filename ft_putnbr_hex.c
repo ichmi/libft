@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnb16.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:15:03 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/05/18 17:00:36 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/05/18 17:17:56 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	ft_putlhex(unsigned long d)
 	}
 	return (bw);
 }
+
 static int	ft_putuhex(unsigned long d)
 {
 	char	*hex;
