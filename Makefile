@@ -6,14 +6,14 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/04/27 13:42:06 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/05/18 17:01:07 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY = all clean fclean re bonus
 
 NAME = libft.a
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 B_SRCS = \
@@ -61,7 +61,14 @@ M_SRCS = \
 	./ft_putchar_fd.c \
 	./ft_putstr_fd.c \
 	./ft_putendl_fd.c \
-	./ft_putnbr_fd.c
+	./ft_putnbr_fd.c \
+	./ft_putchar.c \
+	./ft_putstr.c \
+	./ft_putnbr.c \
+	./ft_putunbr.c \
+	./ft_putnbr_hex.c \
+	./ft_ultoa.c \
+	./ft_putptr.c
 
 M_OBJS = ${M_SRCS:.c=.o}
 B_OBJS = ${B_SRCS:.c=.o}
@@ -69,18 +76,18 @@ B_OBJS = ${B_SRCS:.c=.o}
 all: ${NAME}
 
 ${NAME}: ${M_OBJS}
-	ar rc ${NAME} ${M_OBJS}
+	@ar rc ${NAME} ${M_OBJS}
 
 bonus: ${B_OBJS}
-	ar rc ${NAME} ${B_OBJS}
+	@ar rc ${NAME} ${B_OBJS}
 
 .c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 clean:
-	rm -f ${M_OBJS} ${B_OBJS}
+	@rm -f ${M_OBJS} ${B_OBJS}
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re: fclean all
