@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 18:15:53 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/05/18 16:23:11 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/05/18 17:41:11 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,14 @@ char	*ft_ultoa(unsigned long n, char *base)
 	if (!base || !*base)
 		base = "0123456789";
 	len = ft__ndigits(n, base);
-	s = malloc((len + 1) * sizeof(char));
+	s = ft_calloc(len + 1, sizeof(char));
 	if (!s)
 		return (NULL);
-	s[len] = '\0';
 	while (--len)
 	{
 		s[len] = base[n % ft_strlen(base)];
 		n /= ft_strlen(base);
 	}
-	s[0] = base[n % ft_strlen(base)];
+	s[len] = base[n % ft_strlen(base)];
 	return (s);
 }
