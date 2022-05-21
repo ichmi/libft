@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:08:06 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/04/27 11:48:03 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/05/21 11:22:56 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	pb = buff;
 	ft_strlcpy(buff, s1, -1);
-	while (*buff)
-		buff++;
 	ft_strlcat(buff, s2, -1);
 	return (pb);
 }

@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:22:21 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/05/18 17:17:28 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/05/21 11:26:07 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoins(char *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
@@ -73,6 +74,7 @@ int		ft_putnbr(int n);
 int		ft_putunbr(unsigned int n);
 int		ft_putnbr_hex(unsigned long n, int c);
 char	*ft_ultoa(unsigned long n, char *base);
+char	*ft_utoa(unsigned int n);
 int		ft_putptr(void *p);
 
 #endif
