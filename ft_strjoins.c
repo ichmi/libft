@@ -26,6 +26,6 @@ char	*ft_strjoins(char *s1, char const *s2)
 	ft_strlcpy(buff, s1, -1);
 	ft_strlcat(buff, s2, -1);
 	free(s1);
-	return (pb);
+	return (buff);
 }
 
