@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/05/23 14:35:01 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/05/27 20:49:34 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ M_SRCS = \
 	./ft_utoab.c \
 	./ft_utoa.c \
 	./ft_putptr.c \
+	./ft_putnstr.c \
 	./ft_strjoins.c 
 
 M_OBJS = ${M_SRCS:.c=.o}
