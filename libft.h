@@ -6,14 +6,24 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:22:21 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/05/27 20:49:20 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/06/18 20:33:04 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 256
+# endif
 
 typedef struct s_list
 {
@@ -76,5 +86,6 @@ char	*ft_ultoa(unsigned long n, char *base);
 char	*ft_utoab(unsigned int n, char *base);
 char	*ft_utoa(unsigned int n);
 int		ft_putptr(void *p);
+char	*ft_gnl(int fd);
 
 #endif
