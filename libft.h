@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:22:21 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/06/18 20:33:04 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/06/22 15:18:31 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ char	*ft_utoab(unsigned int n, char *base);
 char	*ft_utoa(unsigned int n);
 int		ft_putptr(void *p);
 char	*ft_gnl(int fd);
+int		ft_printf(const char *fmt, ...);
 
 #endif
