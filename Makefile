@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/06/22 15:22:11 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/06/22 15:25:40 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,9 +100,6 @@ ${NAME}: ${OBJS}
 	ar -rcs $@ $^
 	make -C ft_printf/
 	ar -rs $@ ft_printf/*.o
-
-# mv ft_printf/libftprintf.a .
-# ar -x libftprintf.a
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
