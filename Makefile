@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/06/22 15:25:40 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/06/22 21:08:33 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,6 +90,7 @@ SRCS	= \
 	ft_lstclear.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
+	ft_free_matrix.c \
 	ft_gnl.c
 
 OBJS	= ${SRCS:.c=.o}
