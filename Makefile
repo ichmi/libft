@@ -13,7 +13,7 @@
 .PHONY	= all clean fclean re bonus
 
 NAME	= libft.a
-CC		= gcc
+CC		= clang
 INC		= -Ift_printf
 CFLAGS	= -Wall -Wextra -Werror
 
