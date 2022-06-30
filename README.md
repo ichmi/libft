@@ -70,15 +70,15 @@ To use it, you should have the following packages installed:
 apt-get install clang make
 ```
 
-## Using it
-Once you cloned it, you can just make it:
+## Usage
+First, you should clone the repo, and then you can just make it:
 ```bash
+git clone https://github.com/ichmi/libft.git
 make
-
-# It will generate an archive file called `libft.a` which you can use ir order to use these functions on your project:
-ls | grep "libft.a"
-
-# you can also check if all object files are inside of it with the command ar:
+```
+It will generate an archive file called `libft.a` which you can use ir order to use these functions on your project:
+```bash
+# This command will check all object files avaiable inside the archive:
 ar -t libft.a
 ```
 
