@@ -61,8 +61,8 @@ I'm actually expanding my libft throughout the year, and bellow is all functions
 | `ft_lstmap` | Applies a function to a copy of the list, freeing when necessary |
 | `ft_lstiter` | Applies a function call to the content of every node of the list |
 | `ft_lstdelone` | Frees and applies a function call to the content of a given node |
-| [ft_gnl](https://github.com/ichmi/get_next_line#gnl--42sp) | Function that returns a line read from a given file descriptor |
-| [ft_printf](https://github.com/ichmi/ft_printf#ft_printf--42sp) | Home-made `printf` function from `<stdio.h>` |
+| `ft_gnl`| Function that returns a line read from a given file descriptor. See [get_next_line](https://github.com/ichmi/get_next_line#gnl--42sp) |
+| `ft_printf` | Home-made `printf` function from `<stdio.h>`. See [ft_printf](https://github.com/ichmi/ft_printf#ft_printf--42sp) |
 
 ## Requirements
 To use it, you should have the following packages installed:
