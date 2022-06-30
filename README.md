@@ -89,7 +89,7 @@ clang main.c -I. -L. -lft
 # or even
 clang main.c -lft 
 
-# if it isnt, you could specify the include path -I<path> and the path where we can find the library -L<path> followed by the lib -l<libname>:
+# if isnt, you could specify the include path -I<path> and the path where we can find the library -L<path> followed by the lib -l<libname>:
 clang main.c -Ilibft/ -Llibft -lft
 
 # Another way would be providing the archive file during your program compilation (Personally I dont like it):
