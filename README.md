@@ -76,7 +76,7 @@ First, you should clone the repo, and then you can just make it:
 git clone https://github.com/ichmi/libft.git
 make
 ```
-It will generate an archive file called `libft.a` which you can use ir order to use these functions on your project:
+It will generate an archive file called `libft.a` which you can use ir order to use these functions in your project:
 ```bash
 # This command will check all object files avaiable inside the archive:
 ar -t libft.a
