@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/06/22 21:08:33 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/08/10 05:34:44 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,28 +90,35 @@ SRCS	= \
 	ft_lstclear.c \
 	ft_lstiter.c \
 	ft_lstmap.c \
+	ft_lstpop.c \
+	ft_lstdel.c \
 	ft_free_matrix.c \
 	ft_gnl.c
 
-OBJS	= ${SRCS:.c=.o}
+OBJSDIR	= obj
+OBJS	= $(addprefix ${OBJSDIR}/, ${SRCS:%.c=%.o})
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
-	ar -rcs $@ $^
-	make -C ft_printf/
-	ar -rs $@ ft_printf/*.o
+${NAME}: ${OBJSDIR} ${OBJS}
+	ar -rcs $@ $</*.o
+	${MAKE} -C ft_printf/
+	ar -rs $@ ft_printf/obj/*.o
+	rm -rf ft_printf/libftprintf.a
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+${OBJSDIR}:
+	mkdir -p $@
+
+${OBJSDIR}/%.o: %.c
+	${CC} ${CFLAGS} -c $< -o $@
 
 bonus: all
 
 clean:
-	make fclean -C ft_printf
-	rm -f *.o
+	${MAKE} fclean -C ft_printf
+	rm -rf ${OBJSDIR}
 
 fclean: clean
-	rm -f *.a
+	rm -rf ${NAME}
 
 re: fclean all

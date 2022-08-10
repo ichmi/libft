@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/16 14:02:31 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/06/22 15:06:29 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/08/10 05:35:17 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,25 +37,27 @@ SRCS	= \
 	sharp.c \
 	plus.c
 
-OBJS	= ${SRCS:%.c=%.o}
+OBJSDIR	= obj
+OBJS	= $(addprefix ${OBJSDIR}/, ${SRCS:%.c=%.o})
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
+${NAME}: | ${LIB} ${OBJSDIR} ${OBJS}
 	ar -rcs $@ $^
-
-${OBJS}: | ${LIB}
-
-.c.o:
-	${CC} ${CFLAGS} ${INC} -c $< -o ${<:%.c=%.o}
 
 ${LIB}:
 	${MAKE} -C libft/
 
+${OBJSDIR}:
+	mkdir -p $@
+
+${OBJSDIR}/%.o: %.c
+	${CC} ${CFLAGS} ${INC} -c $< -o $@
+
 bonus: all
 
 clean:
-	rm -rf *.o
+	rm -rf ${OBJSDIR}
 
 fclean: clean
 	rm -rf ${NAME}

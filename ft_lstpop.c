@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstpop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/19 13:55:22 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/10 04:22:32 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/08/10 00:44:54 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/08/10 00:50:14 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_list	*ft_lstpop(t_list **head)
 {
+	t_list	*last;
 	t_list	*node;
 
-	node = *lst;
-	if (node)
-		ft_lstlast(node)->next = new;
-	else
-		node = new;
+	if (!head)
+		return (NULL);
+	node = *head;
+	last = ft_lstlast(node);
+	while (node->next->next)
+		node = node->next;
+	node->next = NULL;
+	return (last);
 }
