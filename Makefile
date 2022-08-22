@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/08/21 21:43:27 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/08/21 21:53:43 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -98,6 +98,7 @@ SRCS	= \
 	ft_gnl.c \
 	ft_dlstadd_back.c \
 	ft_dlstadd_front.c \
+	ft_dlstlast.c \
 	ft_dlsthead.c \
 	ft_dlstnew.c
 

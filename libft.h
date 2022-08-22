@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:22:21 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/21 21:47:37 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/08/21 21:52:42 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,10 +114,11 @@ typedef struct s_dlist
 	struct s_dlist	*prev;
 }				t_dlist;
 
-t_list	*ft_dlsthead(t_list *lst);
-t_list	*ft_dlstnew(void *content);
-void	ft_dlstadd_front(t_list **lst, t_list *new);
-void	ft_dlstadd_back(t_list **lst, t_list *new);
+t_dlist	*ft_dlsthead(t_dlist *lst);
+t_dlist	*ft_dlstlast(t_dlist *lst);
+t_dlist	*ft_dlstnew(void *content);
+void	ft_dlstadd_front(t_dlist **lst, t_dlist *new);
+void	ft_dlstadd_back(t_dlist **lst, t_dlist *new);
 
 
 #endif
