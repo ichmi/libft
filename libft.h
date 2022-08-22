@@ -6,7 +6,7 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:22:21 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/21 21:43:49 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/08/21 21:47:37 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		ft_isspace(int c);
 
 // <stdlib.h>
 int			ft_atoi(const char *nptr);
-long long	ft_atoll(const char *s)
+long long	ft_atoll(const char *s);
 void		*ft_calloc(size_t nmemb, size_t size);
 
 // <string.h>
