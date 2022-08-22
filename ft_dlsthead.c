@@ -6,13 +6,13 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 21:35:38 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/21 21:43:12 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/08/21 21:55:17 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_dlsthead(t_list *lst)
+t_dlist	*ft_dlsthead(t_dlist *lst)
 {
 	while (lst)
 	{
