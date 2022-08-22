@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_dlstadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 15:06:15 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/21 21:33:45 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/08/17 23:22:43 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/08/17 23:27:26 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+void	ft_dlstadd_back(t_dlist **lst, t_dlist *new)
 {
-	int	result;
-	int	sign;
+	t_dlist	*last;
 
-	while (ft_isspace(*s))
-		s++;
-	sign = 1;
-	if (*s == '-' || *s == '+')
-		if (*s++ == '-')
-			sign = -1;
-	result = 0;
-	while (*s >= '0' && *s <= '9')
-		result = (result * 10) + (*s++ - '0');
-	return (result * sign);
+	if (!new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	last = ft_dlstlast(*lst);
+	last->next = new;
+	new->prev = last;
 }

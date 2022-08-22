@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_dlstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 15:06:15 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/21 21:33:45 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/08/17 23:17:52 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/08/17 23:22:04 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *s)
+t_dlist	*ft_dlstnew(void *content)
 {
-	int	result;
-	int	sign;
+	t_dlist	*node;
 
-	while (ft_isspace(*s))
-		s++;
-	sign = 1;
-	if (*s == '-' || *s == '+')
-		if (*s++ == '-')
-			sign = -1;
-	result = 0;
-	while (*s >= '0' && *s <= '9')
-		result = (result * 10) + (*s++ - '0');
-	return (result * sign);
+	node = (t_dlist *)malloc(sizeof(*node));
+	if (!node)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	node->prev = NULL;
+	return (node);
 }

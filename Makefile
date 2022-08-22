@@ -6,7 +6,7 @@
 #    By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/07 17:12:17 by frosa-ma          #+#    #+#              #
-#    Updated: 2022/08/10 05:34:44 by frosa-ma         ###   ########.fr        #
+#    Updated: 2022/08/21 21:38:08 by frosa-ma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRCS	= \
 	ft_isalnum.c \
 	ft_isascii.c \
 	ft_isprint.c \
+	ft_isspace.c \
 	ft_strlen.c \
 	ft_memset.c \
 	ft_bzero.c \
@@ -57,6 +58,7 @@ SRCS	= \
 	ft_memcmp.c \
 	ft_strnstr.c \
 	ft_atoi.c \
+	ft_atoll.c \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_substr.c \
@@ -93,7 +95,11 @@ SRCS	= \
 	ft_lstpop.c \
 	ft_lstdel.c \
 	ft_free_matrix.c \
-	ft_gnl.c
+	ft_gnl.c \
+	ft_dlstadd_back.c \
+	ft_dlstadd_front.c \
+	ft_dlsthead.c \
+	ft_dlstnew.c
 
 OBJSDIR	= obj
 OBJS	= $(addprefix ${OBJSDIR}/, ${SRCS:%.c=%.o})

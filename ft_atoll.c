@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 15:06:15 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/21 21:33:45 by frosa-ma         ###   ########.fr       */
+/*   Created: 2022/08/21 21:29:43 by frosa-ma          #+#    #+#             */
+/*   Updated: 2022/08/21 21:31:15 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#inclue "libft.h"
 
-int	ft_atoi(const char *s)
+long long	ft_atoll(const char *s)
 {
-	int	result;
-	int	sign;
+	long long	result;
+	int			sign;
 
 	while (ft_isspace(*s))
 		s++;
