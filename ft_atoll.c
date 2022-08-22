@@ -6,11 +6,11 @@
 /*   By: frosa-ma <frosa-ma@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 21:29:43 by frosa-ma          #+#    #+#             */
-/*   Updated: 2022/08/21 21:43:21 by frosa-ma         ###   ########.fr       */
+/*   Updated: 2022/08/21 21:49:27 by frosa-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#inclue "libft.h"
+#include "libft.h"
 
 long long	ft_atoll(const char *s)
 {
